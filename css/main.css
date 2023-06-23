@@ -1,0 +1,172 @@
+:root {
+    --hl-light: #6fbfbc;
+    --hl-dark: #5b9b99;
+    --border: #858585;
+}
+
+::selection {
+    background: var(--hl-light);
+}
+
+@font-face {
+    font-family: 'Charis SIL';
+    src:
+        url('../fonts/charissilb-webfont.woff2') format('woff2'),
+        url('../fonts/charissilb-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Charis SIL';
+    src:
+        url('../fonts/charissilbi-webfont.woff2') format('woff2'),
+        url('../fonts/charissilbi-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Charis SIL';
+    src:
+        url('../fonts/charissili-webfont.woff2') format('woff2'),
+        url('../fonts/charissili-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Charis SIL';
+    src:
+        url('../fonts/charissilr-webfont.woff2') format('woff2'),
+        url('../fonts/charissilr-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1em;
+    background-color: #fafafa;
+    line-height: 1.2;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5em;
+    font-family: 'Charis SIL', serif;
+    border-bottom: 1px solid var(--border);
+}
+
+#header_title h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+#header_title p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #525252;
+}
+
+#link_icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.5em;
+}
+
+#link_icons svg {
+    padding: 0.5em;
+    width: 1.7em;
+    height: 1.7em;
+    vertical-align: middle;
+}
+
+#link_icons svg:hover {
+    fill: var(--hl-light);
+}
+
+#link_icons svg:active {
+    fill: var(--hl-dark);
+}
+
+#posts_wrap {
+    padding: 0.5em;
+    font-family: Tahoma, sans-serif;
+}
+
+#posts_wrap a {
+    color: inherit;
+}
+
+#posts_wrap a:hover {
+    background-color: var(--hl-light);
+}
+
+#posts_wrap a:active {
+    background-color: var(--hl-dark);
+}
+
+.post {
+    padding: 0.5em;
+}
+
+.post_image_wrap {
+    position: relative;
+    width: 100%;
+}
+
+.post_image_wrap::after {
+    display: block;
+    content: '';
+    padding-top: 25%;
+}
+
+.post_image_wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.post_body {
+    display: inline-block;
+    padding: 0 1em;
+    background-color: #ebebeb;
+    border: solid var(--border);
+    border-width: 0 1px 1px 1px;
+}
+
+.post_header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.post_header * {
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.post_header .date {
+    font-size: 0.9rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+
+.post_text p {
+    margin-top: 0;
+}
+
+.placeholder {
+    margin: 5em auto;
+    text-align: center;
+    font-size: 1.5rem;
+}
